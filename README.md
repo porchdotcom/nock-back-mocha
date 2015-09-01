@@ -12,6 +12,12 @@ describe('Tests that make http requests', function () {
     var nockBackMocha = require('nock-back-mocha')(nockFixtureDirectory);
     beforeEach(nockBackMocha.beforeEach);
     afterEach(nockBackMocha.afterEach);
+    
+    it('makes an http request', function (done) {
+        request('http://example.com', function (err, res, body) {
+            done(err);
+        });
+    });
 });
 ```
 
