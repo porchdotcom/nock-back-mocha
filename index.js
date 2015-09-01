@@ -2,7 +2,7 @@
 
 var nock = require('nock');
 
-module.exports = function (fixtures, mode) {
+module.exports = function (fixtures) {
     var filenames = [];
     return {
         beforeEach: function (done) {
@@ -16,13 +16,9 @@ module.exports = function (fixtures, mode) {
             var previousFixtures = nock.back.fixtures;
             nock.back.fixtures = fixtures;
 
-            var previousMode = nock.back.currentMode;
-            nock.back.setMode(mode);
-
             nock.back(filename, function (nockDone) {
                 this.currentTest.nockDone = function () {
                     nockDone();
-                    nock.back.setMode(previousMode);
                     nock.back.fixtures = previousFixtures;
                 };
                 done();
