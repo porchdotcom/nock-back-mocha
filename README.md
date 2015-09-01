@@ -8,7 +8,8 @@ Thin wrapper around [nock.back](https://github.com/pgte/nock#nock-back) that spe
 ### Usage
 ```js
 describe('Tests that make http requests', function () {
-  var nockBackMocha = require('nock-back-mocha')(path.resolve(__dirname, './fixtures'));
+  var nockFixtureDirectory = path.resolve(__dirname, './fixtures');
+  var nockBackMocha = require('nock-back-mocha')(nockFixtureDirectory);
   beforeEach(nockBackMocha.beforeEach);
   afterEach(nockBackMocha.afterEach);
 });
