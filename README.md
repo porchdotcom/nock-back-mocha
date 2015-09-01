@@ -1,6 +1,6 @@
 # nock-back-mocha
 
-Thin wrapper around [nock.back](https://github.com/pgte/nock#nock-back) that specifies a new nock file in the directory specified for each test, and cleans up when the test is done.
+Thin wrapper around [nock.back](https://github.com/pgte/nock#nock-back) that uses different nock files for each test, and cleans up when the mocha test is done.
 
 ### Arguments
 - directory - where do you want the nock files stored?
