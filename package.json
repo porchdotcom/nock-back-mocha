@@ -22,7 +22,7 @@
     "test"
   ],
   "dependencies": {
-    "nock": "^2.10.0"
+    "nock": "^2.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.1",
