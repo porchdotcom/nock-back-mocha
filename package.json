@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/porchdotcom/nock-back-mocha#readme",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "lint": "./node_modules/.bin/eslint ."
+    "test": "mocha",
+    "lint": "eslint ."
   },
   "pre-commit": [
     "lint",
