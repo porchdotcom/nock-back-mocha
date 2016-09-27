@@ -22,7 +22,8 @@
     "test"
   ],
   "dependencies": {
-    "nock": "^2.11.0"
+    "nock": "^2.11.0",
+    "sanitize-filename": "^1.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.1",
